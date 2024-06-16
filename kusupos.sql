@@ -11,7 +11,7 @@
  Target Server Version : 100428
  File Encoding         : 65001
 
- Date: 15/06/2024 08:51:15
+ Date: 16/06/2024 08:50:57
 */
 
 SET NAMES utf8mb4;
@@ -62,15 +62,29 @@ CREATE TABLE `productos`  (
   `precio` float NOT NULL,
   `idCategoria` int NOT NULL,
   `estado` int NOT NULL,
+  `foto` varchar(255) CHARACTER SET utf8 COLLATE utf8_spanish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `idCategoria`(`idCategoria`) USING BTREE,
   CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`idCategoria`) REFERENCES `categorias` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 15 CHARACTER SET = utf8 COLLATE = utf8_spanish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of productos
 -- ----------------------------
-INSERT INTO `productos` VALUES (1, 'Acevichado', 25, 1, 1);
+INSERT INTO `productos` VALUES (1, 'Acevichado', 25, 1, 1, 'Assets\\img\\productos\\makis\\acevichado.jpeg');
+INSERT INTO `productos` VALUES (2, 'Furai', 25, 1, 1, 'Assets\\img\\productos\\makis\\furai.jpg');
+INSERT INTO `productos` VALUES (3, 'Parrillero', 25, 1, 1, 'Assets\\img\\productos\\makis\\parrillero.jpg');
+INSERT INTO `productos` VALUES (4, 'California', 25, 1, 1, 'Assets\\img\\productos\\makis\\california.jpg');
+INSERT INTO `productos` VALUES (5, 'Tartar', 25, 1, 1, 'Assets\\img\\productos\\makis\\tartar.jpg');
+INSERT INTO `productos` VALUES (6, 'Tentación', 25, 1, 1, 'Assets\\img\\productos\\makis\\tentacion.jpg');
+INSERT INTO `productos` VALUES (7, 'Spicy', 25, 1, 1, 'Assets\\img\\productos\\makis\\spicy.jpeg');
+INSERT INTO `productos` VALUES (8, 'Avocado', 25, 1, 1, 'Assets\\img\\productos\\makis\\avocado.jpg');
+INSERT INTO `productos` VALUES (9, 'Chicken Brasa', 25, 1, 1, 'Assets\\img\\productos\\makis\\chickenbrasa.jpeg');
+INSERT INTO `productos` VALUES (10, 'Lomo Saltado', 25, 1, 1, 'Assets\\img\\productos\\makis\\lomosaltado.jpg');
+INSERT INTO `productos` VALUES (11, 'Ostion', 25, 1, 1, 'Assets\\img\\productos\\makis\\ostion.jpeg');
+INSERT INTO `productos` VALUES (12, 'Ice Cream', 25, 1, 1, 'Assets\\img\\productos\\makis\\icecream.jpg');
+INSERT INTO `productos` VALUES (13, 'Dulce', 25, 1, 1, 'Assets\\img\\productos\\makis\\dulce.jpg');
+INSERT INTO `productos` VALUES (14, 'Vegetariano', 25, 1, 1, 'Assets\\img\\productos\\makis\\vegetariano.jpg');
 
 -- ----------------------------
 -- Table structure for tipodocumento
