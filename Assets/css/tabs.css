@@ -47,8 +47,6 @@ nav > div a.nav-item.nav-link:focus
 
 /* PRODUCTS BOXES */
 
-body{margin-top:20px;}
-
 .product-card-10 {
     border: 1px solid var(--bs-gray-300)
 }

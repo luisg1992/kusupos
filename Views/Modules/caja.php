@@ -69,13 +69,12 @@
                                                                         <div class="product-card-10">
                                                                             <div class="product-card-image">
                                                                                 <div class="badge-ribbon"><span class="badge bg-danger">Sale</span></div>
-                                                                                <div class="product-media"><a href="#"><img class="img-fluid" src="'.$value1["foto"].'" title="" alt="" width="300" height="300"></a></div>
+                                                                                <div class="product-media"><a href="#" class="btnAgregarCarrito" nombre="'.$value1["nombre"].'" id="'.$value1["id"].'" precio="'.$value1["precio"].'"><img class="img-fluid" src="'.$value1["foto"].'" title="" alt="" width="300" height="300"></a></div>
                                                                             </div>
                                                                             <div class="product-card-info">
                                                                                 <div class="rating-star text"><i class="bi bi-star-fill active"></i> <i class="bi bi-star-fill active"></i> <i class="bi bi-star-fill active"></i> <i class="bi bi-star-fill active"></i> <i class="bi bi-star"></i></div>
                                                                                 <h6 class="product-title"><a href="#">'.$value1["nombre"].'</a></h6>
                                                                                 <div class="product-price"><span class="text-primary">S/.'.$value1["precio"].'.<small>00</small></span></div>
-                                                                                <div class="product-action"><a href="#" class="btn"><i class="fa fa-shopping-cart"></i></a></div>
                                                                             </div>
                                                                         </div>
                                                                       </div>
@@ -105,32 +104,15 @@
                             <div class="row">
                                 <table class="table table-dark">
                                     <thead>
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Producto</th>
-                                        <th scope="col">Cantidad</th>
-                                        <th scope="col">Precio</th>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Producto</th>
+                                            <th scope="col">Cantidad</th>
+                                            <th scope="col">Precio</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>Jacob</td>
-                                            <td>Thornton</td>
-                                            <td>@fat</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>@twitter</td>
-                                        </tr>
+                                    <tbody id="carrito">
+                
                                     </tbody>
                                 </table>
                             </div>

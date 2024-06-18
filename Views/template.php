@@ -93,6 +93,7 @@
 <script src="Assets/js/categorias.js"></script>
 <script src="Assets/js/api.js"></script>
 <script src="Assets/js/tabs.js"></script>
+<script src="Assets/js/caja.js"></script>
   
 </body>
 </html>
