@@ -11,26 +11,29 @@ $(document).on("click", ".btnAgregarCarrito", function(){
     /* LISTADO DE ID'S DE PRODUCTOS AGREGADOS */
     arr=[];
     $("#carrito tr").each(function() {
-            arr.push(this.id);
-
+        arr.push(this.id);
     });
-
-    console.log(arr.includes(this.id));
-
-    console.log(arr);
 
     /* CALCULAMOS EL ORDEN */
 
     lastIpunt = $("#carrito").find("tr").last().attr("inp");
+    list = lastIpunt;
 
     if(lastIpunt==undefined){
         lastIpunt = 1;
     }else{
-        lastIpunt++;
+        lastIpunt++;    
     }
 
+    if(arr.includes(this.id)){
 
-    $('#carrito').append('<tr id="'+id+'" inp="'+lastIpunt+'"><th>'+lastIpunt+'</th><td>'+nombre+'</td><td>2</td><td>'+precio+'</td></tr>');
+        elem = $("#carrito").find("#"+this.id);
+        cantidad = parseInt(elem.find("#cant").text()) + 1;
+        console.log(cantidad);
+        elem.html('<th>'+list+'</th><td>'+nombre+'</td><td id="cant">'+cantidad+'</td><td>S/.'+precio+'.00</td>');
+    }else{
+        $('#carrito').append('<tr id="'+id+'" inp="'+lastIpunt+'"><th>'+lastIpunt+'</th><td>'+nombre+'</td><td id="cant">1</td><td>S/.'+precio+'.00</td></tr>');
+    }
 
     /*idUsuario = $(this).attr("idUsuario");
    

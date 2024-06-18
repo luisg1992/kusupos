@@ -65,11 +65,11 @@
                                                     if(count($productosxCategoria)){
                                                         echo '<div class="row g-3 g-lg-4">';
                                                             foreach($productosxCategoria as $key1=>$value1){
-                                                                echo '<div class="col-6 col-lg-3">
+                                                                echo '<div class="col-6 col-lg-2">
                                                                         <div class="product-card-10">
                                                                             <div class="product-card-image">
                                                                                 <div class="badge-ribbon"><span class="badge bg-danger">Sale</span></div>
-                                                                                <div class="product-media"><a href="#" class="btnAgregarCarrito" nombre="'.$value1["nombre"].'" id="'.$value1["id"].'" precio="'.$value1["precio"].'"><img class="img-fluid" src="'.$value1["foto"].'" title="" alt="" width="300" height="300"></a></div>
+                                                                                <div class="product-media"><a class="btnAgregarCarrito" nombre="'.$value1["nombre"].'" id="'.$value1["id"].'" precio="'.$value1["precio"].'"><img class="img-fluid" src="'.$value1["foto"].'" title="" alt="" width="200" height="200"></a></div>
                                                                             </div>
                                                                             <div class="product-card-info">
                                                                                 <div class="rating-star text"><i class="bi bi-star-fill active"></i> <i class="bi bi-star-fill active"></i> <i class="bi bi-star-fill active"></i> <i class="bi bi-star-fill active"></i> <i class="bi bi-star"></i></div>
