@@ -67,10 +67,13 @@
                                                             foreach($productosxCategoria as $key1=>$value1){
                                                                 echo '<div class="col-6 col-lg-2">
                                                                         <div class="product-card-10">
-                                                                            <div class="product-card-image">
-                                                                                <div class="badge-ribbon"><span class="badge bg-danger">Sale</span></div>
-                                                                                <div class="product-media"><a class="btnAgregarCarrito" nombre="'.$value1["nombre"].'" id="'.$value1["id"].'" precio="'.$value1["precio"].'"><img class="img-fluid" src="'.$value1["foto"].'" title="" alt="" width="200" height="200"></a></div>
-                                                                            </div>
+                                                                            <div class="product-card-image">';
+                                                                            if($value1["idCategoria"]==2){
+                                                                                echo '<div class="product-media"  data-toggle="modal" data-target="#modalAgregarPromo" data-dismiss="modal"><a nombre="'.$value1["nombre"].'" id="'.$value1["id"].'" precio="'.$value1["precio"].'"><img class="img-fluid" src="'.$value1["foto"].'" title="" alt="" width="200" height="200"></a></div>';
+                                                                            }else{
+                                                                                echo '<div class="product-media"><a class="btnAgregarCarrito" nombre="'.$value1["nombre"].'" id="'.$value1["id"].'" precio="'.$value1["precio"].'"><img class="img-fluid" src="'.$value1["foto"].'" title="" alt="" width="200" height="200"></a></div>';
+                                                                            }
+                                                                            echo '</div>
                                                                             <div class="product-card-info">
                                                                                 <div class="rating-star text"><i class="bi bi-star-fill active"></i> <i class="bi bi-star-fill active"></i> <i class="bi bi-star-fill active"></i> <i class="bi bi-star-fill active"></i> <i class="bi bi-star"></i></div>
                                                                                 <h6 class="product-title"><a href="#">'.$value1["nombre"].'</a></h6>
@@ -112,7 +115,9 @@
                                         </tr>
                                     </thead>
                                     <tbody id="carrito">
-                
+                                            <th colspan="2" class="text-center">Total: </th>
+                                            <th id="cantidadT"></th>
+                                            <th id="totalT"></th>
                                     </tbody>
                                 </table>
                             </div>
@@ -125,6 +130,97 @@
     </section>
 
 </div>
+ <!-- /.content-wrapper -->
+ <div class="modal fade" id="modalAgregarPromo">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form role="form" method="post" enctype="multipart/form-data">  
+              <div class="modal-header" style="background:#3c8dbc; color: white;">
+                <h4 class="modal-title">Agregar Cliente</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
 
+              <div class="modal-body">
+                <div class="card-body">
 
-             
+                <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-user"></i></span>
+                      </div>
+                      <input type="text" name="nuevoNombre" id="nuevoNombre" class="form-control" placeholder="Ingresar Nombre...">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-id-card"></i></span>
+                      </div>
+                      <input type="text" name="nuevoDocumento" id="nuevoDocumento" class="form-control" placeholder="Ingresar Documento...">
+                    </div>
+                  </div>
+                    
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-envelope-o"></i></span>
+                    </div>
+                      <input type="email" name="nuevoCorreo" class="form-control" id="nuevoCorreo" placeholder="Ingrese Correo...">
+                    </div>  
+                  </div>
+
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-phone"></i></span>
+                      </div>
+                      <input type="email" name="nuevoTelefono" class="form-control" id="nuevoTelefono" placeholder="Ingrese Teléfono...">
+                    </div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-location-dot"></i></span>
+                      </div>
+                      <input type="email" name="nuevaDireccion" class="form-control" id="nuevaDireccion" placeholder="Ingrese Dirección...">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="input-group date" id="reservationdate">
+                      <div class="input-group-prepend" data-target="#reservationdate" data-toggle="datetimepicker">
+                        <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                      </div>
+                      <input type="text" class="form-control input-lg datetimepicker-input"  name="nuevaFechaNacimiento" id="nuevaFechaNacimiento" placeholder="Ingrese Fecha de Nacimiento..." data-inputmask:"'alias': 'yyy/mm/dd'" data-mask required>
+                      
+                    </div>
+                  </div>
+                </div>
+
+                  
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+              
+              <div class="modal-footer justify-content-between">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Salir</button>
+                <button type="submit" class="btn btn-primary">Guardar Usuario</button>
+              </div>
+              
+              <?php
+
+                  $crearUsuario = new ControllerUsuarios();
+                  $crearUsuario->ctrCrearUsuario();
+              
+              ?>
+            </form>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
