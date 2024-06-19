@@ -36,6 +36,12 @@ $(document).on("click", ".btnAgregarCarrito", function(){
         $('#carrito').append('<tr id="'+id+'" inp="'+lastIpunt+'"><th>'+lastIpunt+'</th><td>'+nombre+'</td><td id="cant">1</td><td id="precio" precio="'+precio+'">S/.'+precio+'.00</td></tr>');
     }
 
+    $("#carrito tr>td #precio").each(function() {
+        console.log(this);
+    });
+
+
+
     /*idUsuario = $(this).attr("idUsuario");
    
 

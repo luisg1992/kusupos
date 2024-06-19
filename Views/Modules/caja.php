@@ -115,10 +115,13 @@
                                         </tr>
                                     </thead>
                                     <tbody id="carrito">
-                                            <th colspan="2" class="text-center">Total: </th>
-                                            <th id="cantidadT"></th>
-                                            <th id="totalT"></th>
+                                      
                                     </tbody>
+                                    <tfoot>
+                                      <th colspan="2" class="text-center">Total: </th>
+                                      <th id="cantidadT">0</th>
+                                      <th id="totalT">S/.0.00</th>
+                                    </tfoot>
                                 </table>
                             </div>
                         </div>
@@ -211,12 +214,7 @@
                 <button type="submit" class="btn btn-primary">Guardar Usuario</button>
               </div>
               
-              <?php
 
-                  $crearUsuario = new ControllerUsuarios();
-                  $crearUsuario->ctrCrearUsuario();
-              
-              ?>
             </form>
           </div>
           <!-- /.modal-content -->
