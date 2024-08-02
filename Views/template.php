@@ -67,7 +67,7 @@
     include "Modules/templates/sidebar.php";
 
     if (isset($_GET["ruta"])) {
-      if ($_GET["ruta"] == "caja") {
+      if ($_GET["ruta"] == "ventas") {
 
         include "Modules/".$_GET["ruta"].".php";
         

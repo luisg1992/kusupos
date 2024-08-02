@@ -28,18 +28,16 @@ $(document).on("click", ".btnAgregarCarrito", function(){
     if(arr.includes(this.id)){
 
         elem = $("#carrito").find("#"+this.id);
-        cantidad = parseInt(elem.find("#cant").text()) + 1;
+        cantidad = parseInt(elem.find("#cant").value) + 1;
         precio = parseInt(elem.find("#precio").attr("precio")) + (parseInt(elem.find("#precio").attr("precio")/(cantidad-1)));
         console.log(cantidad);
-        elem.html('<th>'+list+'</th><td>'+nombre+'</td><td id="cant">'+cantidad+'</td><td id="precio" precio="'+precio+'">S/.'+precio+'.00</td>');
+        elem.html('<th>'+list+'</th><td>'+nombre+'</td><td><input type="number" style="width:50px;" value="'+cantidad+'" id="cant"></td><td id="precio" precio="'+precio+'">S/.'+precio+'.00</td>');
     }else{
         $('#carrito').append('<tr id="'+id+'" inp="'+lastIpunt+'"><th>'+lastIpunt+'</th><td>'+nombre+'</td><td id="cant">1</td><td id="precio" precio="'+precio+'">S/.'+precio+'.00</td></tr>');
     }
 
-    $("#carrito tr>td #precio").each(function() {
-        console.log(this);
-    });
-
+    console.log(nombre)
+    $(".modal-title").text(nombre);
 
 
     /*idUsuario = $(this).attr("idUsuario");

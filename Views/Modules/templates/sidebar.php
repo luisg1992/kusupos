@@ -39,12 +39,21 @@
               <p>Inicio</p>
             </a>
           </li>
-
+<!-- 
           <li class="nav-item">
             <a href="caja" class="nav-link">
               <i class="nav-icon fa fa-money"></i>
               <p>
                 Caja
+              </p>
+            </a>
+          </li>
+ -->
+          <li class="nav-item">
+            <a href="ventas" class="nav-link">
+              <i class="nav-icon fa fa-money"></i>
+              <p>
+                Ventas
               </p>
             </a>
           </li>
