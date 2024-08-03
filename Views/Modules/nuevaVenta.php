@@ -18,7 +18,27 @@
         <div class="card">
             <div class="card-body">
                 <h1>Venta # 1</h1>
-                <label for="cliente"></label>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label for="nuevoCliente">Cliente</label>
+                            <input type="text" class="form-control" id="nuevoCliente" placeholder="Ingrese nombre cliente">
+                        </div>
+                    </div>    
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label for="nuevoCliente">Cliente</label>
+                            <input type="text" class="form-control" id="nuevoCliente" placeholder="Ingrese nombre cliente">
+                        </div>
+                    </div> 
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label for="nuevoCliente">Fecha</label>
+                            <input type="text" class="form-control" id="nuevaFecha" value="<?php echo date("d-m-Y H:i:s"); ?>" disabled>
+                        </div>
+                    </div>    
+                </div>
+                
 
             </div>
         </div>
